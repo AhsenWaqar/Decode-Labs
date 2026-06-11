@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details - Student Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>EduManage</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="/index.html">Dashboard</a>
+            <a href="/students.html">Students</a>
+            <a href="/add-student.html">Add Student</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1 class="page-title">Student Profile</h1>
+            <div>
+                <a href="/students.html" class="btn" style="background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main); margin-right: 1rem;">Back to List</a>
+                <a id="edit-btn" href="#" class="btn btn-primary">Edit Student</a>
+            </div>
+        </div>
+
+        <div id="alert" class="alert"></div>
+
+        <div class="card animate-fade-in" id="profile-card" style="display: none;">
+            <div class="profile-header">
+                <div class="profile-avatar" id="avatar-initial">A</div>
+                <div class="profile-info">
+                    <h3 id="profile-name">Ali Khan</h3>
+                    <p style="color: var(--text-muted);" id="profile-course">BSCS - Semester 5</p>
+                </div>
+            </div>
+            
+            <div class="profile-details">
+                <div class="detail-item">
+                    <span class="detail-label">Email</span>
+                    <span class="detail-value" id="detail-email">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Phone</span>
+                    <span class="detail-value" id="detail-phone">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Gender</span>
+                    <span class="detail-value" id="detail-gender">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">CGPA</span>
+                    <span class="detail-value" id="detail-cgpa">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Enrolled Date</span>
+                    <span class="detail-value" id="detail-date">-</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/details.js"></script>
+</body>
+</html>

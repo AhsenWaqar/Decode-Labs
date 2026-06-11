@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students - Student Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>EduManage</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="/index.html">Dashboard</a>
+            <a href="/students.html" class="active">Students</a>
+            <a href="/add-student.html">Add Student</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1 class="page-title">Students List</h1>
+            <a href="/add-student.html" class="btn btn-primary">Add New Student</a>
+        </div>
+
+        <div id="alert" class="alert"></div>
+
+        <div class="card animate-fade-in">
+            <div class="filters-bar">
+                <input type="text" id="search-input" class="form-control search-input" placeholder="Search by name, email or course...">
+            </div>
+
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th data-sort="name">Full Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th data-sort="semester">Semester</th>
+                            <th data-sort="cgpa">CGPA</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="students-tbody">
+                        <!-- Rows will be injected here via JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button id="prev-page" class="page-btn">Previous</button>
+                <span style="display:flex; align-items:center; color: var(--text-muted); font-size: 0.875rem;" id="page-info">Page 1</span>
+                <button id="next-page" class="page-btn">Next</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/students.js"></script>
+</body>
+</html>
